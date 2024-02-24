@@ -1,9 +1,10 @@
+import React from 'react';
 import { OurExpertsData } from "Data/our-experts-data";
 import { Button, Img, Slider, Text } from "components";
 import { BtnPrimary } from "components/Button/BtnPrimary";
 import { Heading1 } from "components/Heading";
-import React from "react";
 import { useNavigate } from "react-router-dom";
+
 
 const OurExperts = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const OurExperts = () => {
   const [sliderState, setsliderState] = React.useState(0);
 
   return (
-    <div className="flex flex-col mt-[103px] max-w-[1440px] w-[90%] ">
+    <div className="flex flex-col mt-[103px] max-w-[1440px] w-[90%]">
       <div className="flex flex-col gap-[50px] items-center justify-start w-full">
         <Heading1
           className={` text-center `}
@@ -26,7 +27,7 @@ const OurExperts = () => {
           }}
           description={{
             text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printe.`,
-            className: `w-[80%] mx-auto md:w-full`,
+            className: `w-[80%] mx-auto md:w-full text-center`,
           }}
         />
 
@@ -36,19 +37,18 @@ const OurExperts = () => {
           autoPlayInterval={1000}
           activeIndex={sliderState}
           responsive={{
-            0: { items: 1.6 },
-            550: { items: 2.6 },
-            1050: { items: 4.6 },
+            0: { items: 1 },
+            550: { items: 2 },
+            1050: { items: 4 },
           }}
           onSlideChanged={(e) => {
             setsliderState(e?.item);
           }}
           ref={sliderRef}
-          className="max-w-[1440px] md:px-0 px-5 w-screen ml-auto"
-          items={OurExpertsData?.map((obj, key) => (
+          className=" w-screen ml-auto"
+          items={OurExpertsData.map((obj, key) => (
             <Card key={key} { ...obj } />
           ))}
-          gap={10}
           renderDotsItem={({ isActive }) => {
             if (isActive) {
               return (

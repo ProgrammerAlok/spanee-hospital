@@ -30,7 +30,7 @@ const OurReviews = () => {
         </div>
         <Slider
           autoPlay
-          autoPlayInterval={2000}
+          autoPlayInterval={1000}
           activeIndex={sliderState}
           responsive={{
             0: { items: 1 },
@@ -41,7 +41,7 @@ const OurReviews = () => {
             setsliderState(e?.item);
           }}
           ref={sliderRef}
-          className="max-w-[1440px] md:px-0 px-5 w-full mx-auto"
+          className="max-w-[1440px] w-full mt-8 md:mt-2"
           items={OurReviewsData.map((obj, key) => <Card key={key} {...obj} />)}
           renderDotsItem={({ isActive }) => {
             if (isActive) {
@@ -95,7 +95,7 @@ const OurReviews = () => {
 
 const Card = ({ customerName, avatar, review }) => {
   return (
-    <div className="bg-white-A700 flex flex-col gap-2.5 items-start justify-end sm:ml-[0] rounded-[10px] shadow-bs5 w-full">
+    <div className="bg-white-A700 flex flex-col gap-2.5 items-start justify-end sm:ml-[0] rounded-[10px] shadow-bs5 w-[95%] p-4">
       <div className="flex flex-row gap-[15px] items-center justify-start w-full md:w-full md:ml-2 ">
         <Img
           className="h-[100px] md:h-auto rounded-[50%] w-[6.2rem] md:w-14"

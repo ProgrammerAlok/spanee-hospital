@@ -3,3 +3,4 @@ export { OurServices } from './OurServices';
 export { OurReviews } from './OurReviews';
 export { OurExperts } from './OurExperts';
 export { OurNewsBlog } from './OurNewsBlog';
+export { default as OurGallery } from './OurGallery';
