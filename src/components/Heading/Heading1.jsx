@@ -21,7 +21,7 @@ export const Heading1 = ({
             size="txtInterBold65"
         >{title?.title1} <br /> {title?.title2}</Text>
         <Text
-          className={`text-gray-600 text-[24px] font-inter font-[400] md:text-[14px] leading-[30px] md:leading-[18px] ${description?.className}`}
+          className={`text-gray-600 text-[24px] font-inter font-[400] md:text-[14px] leading-[30px] md:leading-[18px] mt-4 ${description?.className}`}
           size="txtInterRegular20Gray600"
         > {description?.text} </Text>
     </Component>
