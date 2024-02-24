@@ -5,7 +5,7 @@ import { Img, Line, Text } from "components";
 const Footer = () => {
   return (
     <>
-      <footer className={`bg-indigo-900 flex items-center justify-center md:px-5 w-full  overflow-hidden`}>
+      <footer className={`bg-indigo-900 flex items-center justify-center w-full overflow-hidden`}>
         <div className="flex flex-col items-center justify-center mb-3 mt-12 max-w-[1440px] w-[90%] ">
           <div className="flex flex-col items-center w-full">
             {/* upper */}

@@ -1,11 +1,18 @@
-import { Button, Img, List, Text } from 'components'
-import { Heading1 } from 'components/Heading'
-import React from 'react'
+import { OurServicesData } from "Data/our-services-data";
+import { Button, Img, List, Slider, Text } from "components";
+import { BtnPrimary } from "components/Button/BtnPrimary";
+import { Heading1 } from "components/Heading";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const OurServices = () => {
+  const navigate = useNavigate();
+
+  const sliderRef = React.useRef(null);
+  const [sliderState, setsliderState] = React.useState(0);
   return (
     <div className="sm:h-[1272px] h-[557px] md:h-[963px] max-w-[1440px] mt-[99px] mx-auto md:px-5 relative w-[90%]">
-            {/* <Text
+      {/* <Text
                 className="absolute bottom-[15%] inset-x-[0] mx-auto sm:text-3xl md:text-[32px] text-[34px] text-indigo-900 w-max"
                 size="txtInterBold34"
             >
@@ -17,163 +24,141 @@ const OurServices = () => {
             >
                 Pathology
             </Text> */}
-          <div className="absolute flex flex-col gap-[50px] h-full inset-[0] items-center justify-center m-auto w-full">
-            <div className="flex flex-col items-center justify-start">
-              <Heading1 
-                className={`text-center`}
-                heading={`Our Services`}   
-                title={{
-                    title1: `Provide The Best Treatment For your`,
-                    title2: `Child’s Health`,
-                }}           
-              />
-              <Text
-                className="leading-[30.00px] mt-3.5 text-center text-gray-600_99 text-xl w-[85%]"
-                size="txtInterRegular20Gray60099"
-              >
-                <>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&#39;s
-                  standard dummy text ever since the 1500s, when an unknown
-                  printe.
-                </>
-              </Text>
-            </div>
-            <List
-              className="sm:flex-col flex-row gap-[18px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center w-full"
-              orientation="horizontal"
-            >
-              <div className="bg-white-A700 flex flex-1 flex-col items-center justify-start p-5 rounded-[10px] shadow-bs3 w-full">
-                <div className="flex flex-col items-start justify-start w-full">
-                  <div className="flex flex-row gap-[15px] items-center justify-start w-[66%] md:w-full">
-                    <Img
-                      className="h-20 w-20"
-                      src="images/img_thumbsup.svg"
-                      alt="thumbsup"
-                    />
-                    <Text
-                      className="md:text-2xl sm:text-[22px] text-[26px] text-center text-indigo-900"
-                      size="txtInterSemiBold26"
-                    >
-                      Immunizations
-                    </Text>
-                  </div>
-                  <Text
-                    className="mt-5 text-gray-600 text-xl w-full"
-                    size="txtInterRegular20Gray600"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been.
-                  </Text>
-                  <Button
-                    className="border border-indigo-900 border-solid cursor-pointer flex h-[50px] items-center justify-center min-w-[186px] mt-[29px]"
-                    rightIcon={
-                      <Img
-                        className="h-[22px] mb-px ml-2.5"
-                        src="images/img_frame_indigo_900.svg"
-                        alt="Frame"
-                      />
-                    }
-                    shape="round"
-                    color="white_A700"
-                    size="md"
-                    variant="fill"
-                  >
-                    <div className="font-semibold leading-[normal] text-left text-lg">
-                      Read More
-                    </div>
-                  </Button>
-                </div>
-              </div>
-              <div className="bg-indigo-900 flex flex-1 flex-col items-center justify-start p-5 rounded-[10px] shadow-bs3 w-full">
-                <div className="flex flex-col items-start justify-start w-full">
-                  <div className="flex flex-row gap-[15px] items-center justify-start w-[53%] md:w-full">
-                    <Img
-                      className="h-20 w-20"
-                      src="images/img_user.svg"
-                      alt="user"
-                    />
-                    <Text
-                      className="md:text-2xl sm:text-[22px] text-[26px] text-center text-white-A700"
-                      size="txtInterSemiBold26WhiteA700"
-                    >
-                      Pathology
-                    </Text>
-                  </div>
-                  <Text
-                    className="mt-5 text-white-A700 text-xl w-full"
-                    size="txtInterRegular20"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been.
-                  </Text>
-                  <Button
-                    className="common-pointer border border-red-500 border-solid cursor-pointer flex h-[50px] items-center justify-center min-w-[186px] mt-[29px]"
-                    onClick={() => navigate("/services")}
-                    rightIcon={
-                      <Img
-                        className="h-[22px] mb-px ml-2.5"
-                        src="images/img_frame.svg"
-                        alt="Frame"
-                      />
-                    }
-                    shape="round"
-                    color="red_500"
-                    size="md"
-                    variant="fill"
-                  >
-                    <div className="!text-gray-50 font-semibold leading-[normal] text-left text-lg">
-                      Read More
-                    </div>
-                  </Button>
-                </div>
-              </div>
-              <div className="bg-white-A700 flex flex-1 flex-col items-center justify-start p-5 rounded-[10px] shadow-bs3 w-full">
-                <div className="flex flex-col items-start justify-start w-full">
-                  <div className="flex flex-row gap-[15px] items-center justify-start w-3/4 md:w-full">
-                    <Img
-                      className="h-20 w-20"
-                      src="images/img_thumbsup_blue_gray_600_01.svg"
-                      alt="thumbsup"
-                    />
-                    <Text
-                      className="md:text-2xl sm:text-[22px] text-[26px] text-center text-indigo-900"
-                      size="txtInterSemiBold26"
-                    >
-                      Precise Diagnosis
-                    </Text>
-                  </div>
-                  <Text
-                    className="mt-5 text-gray-600 text-xl w-full"
-                    size="txtInterRegular20Gray600"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been.
-                  </Text>
-                  <Button
-                    className="border border-indigo-900 border-solid cursor-pointer flex h-[50px] items-center justify-center min-w-[186px] mt-[29px]"
-                    rightIcon={
-                      <Img
-                        className="h-[22px] mb-px ml-2.5"
-                        src="images/img_frame_indigo_900.svg"
-                        alt="Frame"
-                      />
-                    }
-                    shape="round"
-                    color="white_A700"
-                    size="md"
-                    variant="fill"
-                  >
-                    <div className="font-semibold leading-[normal] text-left text-lg">
-                      Read More
-                    </div>
-                  </Button>
-                </div>
-              </div>
-            </List>
-          </div>
+      <div className="absolute flex flex-col gap-[50px] h-full inset-[0] items-center justify-center m-auto w-full">
+        <div className="flex flex-col items-center justify-start">
+          <Heading1
+            heading={{
+              text: `Our Services`,
+              className: `text-center text-[#FF3E3D] `,
+            }}
+            title={{
+              title1: `Provide The Best Treatment For your`,
+              title2: `Child’s Health`,
+              className: `text-center`,
+            }}
+            description={{
+              text: `Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&#39;s standard dummy
+              text ever since the 1500s, when an unknown printe.`,
+              className: ` text-center md:w-full w-[80%] mx-auto mt-2 `
+            }}
+          />
         </div>
-  )
-}
 
-export {OurServices}
+        {/* slider */}
+        <Slider
+          autoPlay
+          autoPlayInterval={1000}
+          activeIndex={sliderState}
+          responsive={{
+            0: { items: 1 },
+            550: { items: 2 },
+            1050: { items: 3 },
+          }}
+          onSlideChanged={(e) => {
+            setsliderState(e?.item);
+          }}
+          ref={sliderRef}
+          className="max-w-[1440px] w-full mt-8 md:mt-2"
+          items={OurServicesData.map((obj, key) => (
+            <Card key={key} {...obj} />
+          ))}
+          renderDotsItem={({ isActive }) => {
+            if (isActive) {
+              return (
+                <div className="inline-block cursor-pointer rounded-[50%] h-2.5 bg-indigo-900 w-2.5" />
+              );
+            }
+            return (
+              <div
+                className="inline-block cursor-pointer rounded-[50%] h-2.5 bg-blue_gray-100 w-2.5"
+                role="button"
+                tabIndex={0}
+              />
+            );
+          }}
+        />
+
+        <div className='hidden md:block'>
+          <BtnPrimary 
+            text={'Read More'} 
+            className={``}
+            handleOnClick={()=>{}}  
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Card = ({ logo, title, description, colorScheme }) => {
+  return (
+    <div
+      className={`${
+        colorScheme === "primary" ? "bg-white-A700" : "bg-indigo-900"
+      } flex flex-1 flex-col items-center justify-start p-5 rounded-[10px] shadow-bs3 w-[95%]`}
+    >
+      <div className="flex flex-col items-start justify-start w-full">
+        <div className="flex flex-row gap-[15px] items-center justify-start w-3/4 md:w-full">
+          <Img className=" w-20 md:w-10 aspect-square" src={logo} alt="thumbsup" />
+          <Text
+            className={`md:text-[18px] text-[26px] font-[600] md:font-[700] leading-[31.47px] md:leading-[21.78px] font-inter text-center ${colorScheme==='primary'?'text-indigo-900':'text-white-A700'}`}
+            size="txtInterSemiBold26"
+          >
+            {title}
+          </Text>
+        </div>
+        <Text
+          className={`mt-5 ${
+            colorScheme === "primary" ? "text-gray-600" : "text-white-A700"
+          } text-xl w-full font-[400] text-[20px] md:text-[12px] leading-[24.2px] md:leading-[18px] font-inter `}
+          size="txtInterRegular20Gray600"
+        >
+          {description}
+        </Text>
+        {colorScheme === "primary" ? (
+          <Button
+            className="border border-indigo-900 border-solid mt-[29px] common-pointer cursor-pointer flex h-[50px] md:h-[32px] items-center justify-center md:w-[130px] md:px-[15px] md:py-[7px]"
+            rightIcon={
+              <Img
+                className="h-[22px] md:h-[14px] mb-px ml-2.5"
+                src="images/img_frame_indigo_900.svg"
+                alt="Frame"
+              />
+            }
+            shape="round"
+            color="white_A700"
+            size="md"
+            variant="fill"
+          >
+            <div className="font-semibold font-poppins text-[18px] md:text-[12px] leading-[21.78px] md:leading-[18px]">
+              Read More
+            </div>
+          </Button>
+        ) : (
+          <Button
+            className="common-pointer border border-red-500 border-solid mt-[29px] common-pointer cursor-pointer flex h-[50px] md:h-[32px] items-center justify-center md:w-[130px] md:px-[15px] md:py-[7px]"
+            onClick={() => navigate("/services")}
+            rightIcon={
+              <Img
+                className="h-[22px] md:h-[14px] mb-px ml-2.5"
+                src="images/img_frame.svg"
+                alt="Frame"
+              />
+            }
+            shape="round"
+            color="red_500"
+            size="md"
+            variant="fill"
+          >
+            <div className="!text-gray-50 font-semibold font-poppins text-[18px] md:text-[12px] leading-[21.78px] md:leading-[18px]">
+              Read More
+            </div>
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export { OurServices };

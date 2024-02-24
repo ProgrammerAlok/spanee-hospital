@@ -26,7 +26,7 @@ const OurNewsBlog = () => {
         description={{
           text: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in 
             some form, by injected humour, or randomised words which don't look even slightly believable.`,
-          className: ` w-[80%] mx-auto text-center pt-4 md:pt-2 `,
+          className: `w-[80%] md:w-full mx-auto text-center pt-4 md:pt-2 `,
         }}
       />
 

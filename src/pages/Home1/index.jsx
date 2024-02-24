@@ -34,22 +34,22 @@ const Home1Page = () => {
         <OurServices />
         
         {/* secondary banner */}
-        <div className="relative h-[39rem] w-screen bg-gray-50_03 ">
+        <div className="relative h-[38rem] w-screen bg-gray-50_03 overflow-hidden mt-12 ">
           <div className="absolute inset-x-[0] mx-auto top-[0] max-w-[1440px]">
-            <div className="relative md:h-[1147px] h-[1148px] sm:h-[1212px] mx-auto w-[97%]">
-              {/* <div className="absolute bg-gray-50_03 h-[576px] inset-x-[0] mx-auto top-[0] w-full"></div> */}
-              {/* <div
-                className="absolute bg-contain bg-no-repeat flex flex-col inset-[0] items-center justify-center w-[100%]"
+            <div className="relative md:h-[1147px] h-[1228px] sm:h-[175px] mx-auto">
+              <div className="absolute bg-gray-50_03 inset-x-[0] mx-auto top-[0] w-full"></div>
+              <div
+                className="absolute bg-contain bg-no-repeat flex flex-col inset-[0] md:top-0 items-center justify-center w-[100%]"
                 style={{ 
                   backgroundImage: "url('images/img_group19.svg')"
                }}
               >
                 <div className="flex flex-col items-center justify-start mb-[654px] mt-[82px] w-full">
                   <Text
-                    className="sm:text-[34px] md:text-[40px] text-[44px] text-center text-indigo-900"
+                    className="md:text-[20px] text-[44px] font-inter font-[700] leading-[53.25px] md:leading-[30px] text-center text-indigo-900 "
                     size="txtInterBold44Indigo900"
                   >
-                    <span className="text-indigo-900 font-inter font-bold">
+                    <span className=" font-inter font-bold">
                       Leading The Way In{" "}
                     </span>
                     <span className="text-red-500 font-inter font-bold">
@@ -58,13 +58,13 @@ const Home1Page = () => {
                         <br />
                       </>
                     </span>
-                    <span className="text-indigo-900 font-inter font-bold">
+                    <span className=" font-inter font-bold">
                       {" "}
                       Excellence
                     </span>
                   </Text>
                   <Text
-                    className="leading-[30.00px] mt-[19px] text-center text-gray-600 text-xl w-full"
+                    className="leading-[30px] md:leading-[18px] font-inter font-[400] md:text-[14px] text-[20px] mt-[19px] text-center text-gray-600 w-[80%]"
                     size="txtInterRegular20Gray600"
                   >
                     <>
@@ -105,12 +105,12 @@ const Home1Page = () => {
                     </Button>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
-            {/* <div className="absolute flex sm:flex-col flex-row md:gap-10 inset-x-[0] items-start justify-between mx-auto top-[2%] w-[82%]">
+            <div className="absolute flex sm:flex-col flex-row md:gap-10 inset-x-[0] items-start justify-between mx-auto top-[2%] w-[82%]">
               <div className="bg-blue-50 h-[195px] sm:mt-0 mt-14 rotate-[152deg] rounded-[97px] w-[195px]"></div>
               <div className="bg-blue-50 h-[183px] mb-[68px] rotate-[-161deg] rounded-[91px] w-[183px]"></div>
-            </div> */}
+            </div>
           </div>
         </div>
 

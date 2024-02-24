@@ -1,10 +1,14 @@
 import { Button, Img } from "components";
 
-export const BtnPrimary = ({ text }) => {
+export const BtnPrimary = ({ 
+  text, 
+  className, 
+  handleOnClick = ()=>{} 
+}) => {
   return (
     <Button
-      className="common-pointer cursor-pointer flex h-[50px] md:h-[32px] items-center justify-center md:w-[130px] md:px-[15px] md:py-[7px]"
-      onClick={() => navigate("/teamone")}
+      className={`common-pointer cursor-pointer flex h-[50px] md:h-[32px] items-center justify-center md:w-[130px] md:px-[15px] md:py-[7px] ${className}`}
+      onClick={handleOnClick}
       rightIcon={
         <Img
           className="h-[22px] md:h-[14px] mb-px ml-2.5"

@@ -17,7 +17,7 @@ const OurGallery = () => {
           }}
           description={{
             text: 'Lorem ipsum dolor sit amet, consectetur elit. will Pellentesque efficitur ac quam in congue.',
-            className: 'text-center w-[80%] mx-auto '
+            className: 'text-center w-[80%] md:w-full mx-auto '
           }}
         />
         <div className='grid grid-cols-4 md:grid-cols-3 gap-4 md:gap-2 mt-10 md:mt-4'>        
