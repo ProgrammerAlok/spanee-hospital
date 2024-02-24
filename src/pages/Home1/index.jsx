@@ -15,7 +15,7 @@ import {
 } from "components";
 import Footer from "components/Footer";
 import { HomeBanner } from "./HomeBanner";
-import { AboutUs } from "components/Home";
+import { AboutUs, OurReviews } from "components/Home";
 import { OurServices } from "components/Home";
 
 const Home1Page = () => {
@@ -602,7 +602,8 @@ const Home1Page = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col gap-3.5 items-center justify-start mt-[97px] md:px-5">
+        
+        {/* <div className="flex flex-col gap-3.5 items-center justify-start mt-[97px] md:px-5">
           <Text
             className="sm:text-[34px] md:text-[40px] text-[44px] text-center text-indigo-900"
             size="txtInterBold44Indigo900"
@@ -764,18 +765,23 @@ const Home1Page = () => {
           sliderRef={sliderRef}
           selectedWrapperCss="inline-block md:ml-[0] mx-[5.00px] sm:ml-[0]"
           unselectedWrapperCss="inline-block md:ml-[0] mx-[5.00px] sm:ml-[0]"
-        />
-        <div className="bg-red-500 flex flex-col items-center justify-start mt-[100px] p-[77px] md:px-10 sm:px-5 w-full">
-          <div className="flex md:flex-col flex-row md:gap-10 items-end justify-between max-w-[1440px] mx-auto w-full">
-            <div className="flex flex-col gap-[15px] items-start justify-start">
+        /> */}
+
+        <OurReviews />
+
+        {/* subscriber news letter */}
+        <div className="bg-red-500 mt-[100px] w-screen py-[77px] md:py-5">
+          <div className="flex md:flex-col md:gap-4 gap-10 items-center justify-between max-w-[1440px] w-[90%] mx-auto ">
+            {/* left */}
+            <div className="flex flex-col gap-[15px] w-[30%] md:w-full my-auto items-start justify-start">
               <Text
-                className="sm:text-2xl md:text-[26px] text-[28px] text-center text-white-A700"
+                className="md:text-xl text-2xl md:text-center text-white-A700 md:w-full"
                 size="txtInterSemiBold28"
               >
                 Subscribe Newsletter
               </Text>
               <Text
-                className="ml-0.5 md:ml-[0] text-lg text-white-A700_01 w-full"
+                className="ml-0.5 md:ml-[0] text-xl md:text-sm md:text-center text-white-A700_01 w-full"
                 size="txtInterRegular18WhiteA70001"
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -783,11 +789,12 @@ const Home1Page = () => {
                 book.
               </Text>
             </div>
-            <div className="flex md:flex-1 sm:flex-col flex-row gap-[7px] items-center justify-between md:mt-0 mt-[65px] w-[42%] md:w-full">
+            {/* right */}
+            <div className="flex w-[60%] md:gap-[7px] items-center justify-between md:mt-0 md:w-full">
               <Input
                 name="group1000003850"
                 placeholder="Your Email Address....."
-                className="leading-[normal] p-0 placeholder:text-gray-600 text-left text-sm w-full"
+                className="leading-[normal] p-0 placeholder:text-gray-600 text-left text-sm w-full h-full "
                 wrapClassName="sm:w-full"
                 type="email"
               ></Input>
@@ -804,7 +811,8 @@ const Home1Page = () => {
             </div>
           </div>
         </div>
-        <Footer className="bg-indigo-900 flex items-center justify-center md:px-5 w-full" />
+        
+        <Footer />
       </div>
     </>
   );

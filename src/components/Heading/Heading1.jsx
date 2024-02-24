@@ -12,7 +12,7 @@ export const Heading1 = ({
   return (
     <Component className={`flex flex-col w-full`}>
         <Text
-            className={`text-2xl md:text-xl text-red-500 sm:text-sm tracking-[0.48px] ${className}`}
+            className={`text-indigo-900 font-inter md:leading-[24.2px] md:font-[700] ${className}`}
             size="txtInterMedium24"
         >{heading}</Text>
         <Text

@@ -2,14 +2,14 @@ import React from "react";
 
 import { Img, Line, Text } from "components";
 
-const Footer = ({ className }) => {
+const Footer = () => {
   return (
     <>
-      <footer className={`${className}`}>
-        <div className="flex flex-col items-center justify-center mb-3 mt-12 max-w-[1440px]">
+      <footer className={`bg-indigo-900 flex items-center justify-center md:px-5 w-full  overflow-hidden`}>
+        <div className="flex flex-col items-center justify-center mb-3 mt-12 max-w-[1440px] w-[90%] ">
           <div className="flex flex-col items-center w-full">
             {/* upper */}
-            <div className="flex md:flex-wrap md:gap-5 gap-0 items-start justify-between w-[90%] sm:w-full ">
+            <div className="flex md:flex-wrap md:gap-5 gap-0 items-start justify-between w-full ">
               {/* 1 */}
               <div className="flex flex-col gap-5 md:gap-3 items-start justify-start w-[25%] md:w-[70%] md:mx-auto mr-40 ">
                 <div className="flex flex-col items-center justify-start w-[44%] md:w-full">
@@ -111,7 +111,7 @@ const Footer = ({ className }) => {
             </div>
 
             {/* Below line */}
-            <Line className="bg-white-A700 h-px mt-[3.7rem] sm:mt-3 md:mt-4 w-full" />
+            <Line className="bg-white-A700 h-px mt-[3.7rem] sm:mt-3 md:mt-4 w-screen " />
             <Text
               className="mt-4 md:mt-2 text-base sm:text-xs md:text-lg text-blue_gray-100_01"
               size="txtPoppinsRegular16"
