@@ -71,22 +71,5 @@ const OurGallery = () => {
     </div>
   );
 };
-                
-
-
-    //                 
-    //               </div>
-    //             </div>
-    //           </div>
-    //           <div className="flex sm:flex-col flex-row gap-[26px] items-center justify-between w-full">
-    //             
-    //             
-    //             
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
 
 export default OurGallery;
