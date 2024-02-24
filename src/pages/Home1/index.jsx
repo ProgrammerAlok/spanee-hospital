@@ -15,7 +15,7 @@ import {
 } from "components";
 import Footer from "components/Footer";
 import { HomeBanner } from "./HomeBanner";
-import { AboutUs, OurExperts, OurReviews } from "components/Home";
+import { AboutUs, OurExperts, OurNewsBlog, OurReviews } from "components/Home";
 import { OurServices } from "components/Home";
 import { Heading1 } from "components/Heading";
 
@@ -27,7 +27,7 @@ const Home1Page = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto">
+      <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden">
         <NavBar />
         <HomeBanner />
         <AboutUs />
@@ -214,7 +214,7 @@ const Home1Page = () => {
           </div>
         </Button>
 
-        <div className="flex flex-col gap-[50px] items-center justify-start max-w-[1441px] mt-[105px] mx-auto md:px-5 w-full">
+        {/* <div className="flex flex-col gap-[50px] items-center justify-start max-w-[1441px] mt-[105px] mx-auto md:px-5 w-full">
           <div className="flex flex-col gap-[9px] items-center justify-start">
             <Text
               className="text-2xl md:text-[22px] text-center text-red-A700 sm:text-xl"
@@ -445,8 +445,9 @@ const Home1Page = () => {
               Read More
             </div>
           </Button>
-        </div>
+        </div> */}
 
+        <OurNewsBlog />
         <OurExperts />
         <OurReviews />
 

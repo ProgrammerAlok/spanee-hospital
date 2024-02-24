@@ -1,5 +1,6 @@
 import { OurExpertsData } from "Data/our-experts-data";
 import { Button, Img, Slider, Text } from "components";
+import { BtnPrimary } from "components/Button/BtnPrimary";
 import { Heading1 } from "components/Heading";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -35,8 +36,8 @@ const OurExperts = () => {
           autoPlayInterval={1000}
           activeIndex={sliderState}
           responsive={{
-            0: { items: 1 },
-            550: { items: 2 },
+            0: { items: 1.6 },
+            550: { items: 2.6 },
             1050: { items: 4.6 },
           }}
           onSlideChanged={(e) => {
@@ -64,25 +65,7 @@ const OurExperts = () => {
           }}
         />
 
-        <Button
-          className="common-pointer cursor-pointer flex h-[50px] md:h-[32px] items-center justify-center md:w-[130px] md:px-[15px] md:py-[7px]"
-          onClick={() => navigate("/teamone")}
-          rightIcon={
-            <Img
-              className="h-[22px] md:h-[14px] mb-px ml-2.5"
-              src="images/img_frame.svg"
-              alt="Frame"
-            />
-          }
-          shape="round"
-          color="red_500"
-          size="md"
-          variant="fill"
-        >
-          <div className="font-semibold font-poppins text-[18px] md:text-[12px] leading-[21.78px] md:leading-[18px]">
-            View More
-          </div>
-        </Button>
+        <BtnPrimary text={`View More`} />
       </div>
     </div>
   );
