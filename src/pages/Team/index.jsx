@@ -10,10 +10,8 @@ import { useNavigate } from 'react-router-dom';
 
 const TeamPage = () => {
   const navigate = useNavigate();
-
   const sliderRef = React.useRef(null);
   const [sliderState, setsliderState] = React.useState(0);
-
 
   return (
     <MainLayout title={`Team`}>      
@@ -38,7 +36,13 @@ const TeamPage = () => {
         {/* teams card for grater than md screen */}
         <div className='w-full grid grid-cols-4 gap-y-8 py-8 md:hidden'>
           {OurExpertPageData.map((obj, ind) => 
-            <OurExpertsCard key={ind} { ...obj } ind={ind} className={` w-full`} />
+            <OurExpertsCard 
+              key={ind} 
+              { ...obj } 
+              ind={ind} 
+              className={` w-full`} 
+              handleOnClick={()=>navigate('/team-details', { state: { ...obj } })}
+            />
           )}          
         </div>
 
@@ -62,7 +66,13 @@ const TeamPage = () => {
           ref={sliderRef}
           className=" w-full mx-auto mt-5 hidden md:block "
           items={OurExpertPageData.map((obj, key) => (
-            <OurExpertsCard key={key} { ...obj } ind={key} className={``} />
+            <OurExpertsCard 
+              key={key} 
+              { ...obj } 
+              ind={key} 
+              className={``}
+              handleOnClick={()=>navigate('/team-details', { state: { ...obj } })} 
+            />
           ))}
           renderDotsItem={({ isActive }) => {
             if (isActive) {

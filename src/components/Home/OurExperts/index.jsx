@@ -76,10 +76,14 @@ export const OurExpertsCard = ({
   name, 
   specialization, 
   ind=7, 
-  className
+  className,
+  handleOnClick = ()=>{}
 }) => {
   return (
-    <div className={`md:h-[200px] h-[359px] relative w-[95%] ${className}`}>
+    <div 
+      className={`md:h-[200px] h-[359px] relative w-[95%] cursor-pointer ${className}`}
+      onClick={handleOnClick}  
+    >
       <div className={`absolute ${ind===0?'bg-blue_gray-900':'bg-white-A700'} bottom-[0] flex flex-col gap-[11px] inset-x-[0] items-center justify-end mx-auto p-[18px] rounded-[10px] shadow-bs4 w-full`}>
         <Text 
           className={`mt-[198px] md:text-[18px] text-[26px] ${ind===0?'text-white-A700':'text-indigo-900'} md:font-[700] font-[600] md:leading-[21.78px] leading-[31.47px]`} 

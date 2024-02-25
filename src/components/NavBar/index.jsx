@@ -1,42 +1,12 @@
 import './style.css'
-import { Button, Img, Text } from "components";
-import { useNavigate, NavLink } from 'react-router-dom';
+import { Button, Img } from "components";
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = ({
-  handleOnClick
+  handleOnClick,
+  NavList
 }) => {
   const navigate = useNavigate();
-
-  const NavList = [
-    {
-      to: `/`,
-      title: `Home`,
-    },
-    {
-      to: `/aboutus`,
-      title: `About Us`,
-    },
-    {
-      to: `/services`,
-      title: `Services`,
-    },
-    {
-      to: `/gallery`,
-      title: `Gallery`,
-    },
-    {
-      to: `/blog`,
-      title: `Blog`,
-    },
-    {
-      to: `/team`,
-      title: `Team`,
-    },
-    {
-      to: `/contactus`,
-      title: `Contact Us`,
-    },
-  ];
 
   return (
     <nav className="bg-white-A700 w-screen mx-auto">
@@ -54,84 +24,7 @@ const NavBar = ({
           onClick={handleOnClick}
         />
         <ul className="flex md:flex-1 md:flex-col flex-row gap-6 md:hidden items-center justify-center mb-9 md:mt-0 mt-[39px] w-auto md:w-full common-row-list">
-          {NavList.map(({to, title}, ind) => (
-            <li key={ind}>
-              <NavLink
-                to={to}
-                className="hover:font-bold text-md text-gray-600 "
-              >
-                <Text size="txtInterMedium18"> {title} </Text>
-              </NavLink>
-            </li>
-          ))}
-          {/* <li>
-            <NavLink 
-              className="hover:font-bold text-gray-600 text-md hover:text-red-A700"
-              to={'/aboutus'}
-            >
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-              >
-                {" "}
-              </Text>
-            </NavLink>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-                onClick={() => navigate("/services")}
-              >
-                
-              </Text>
-            </a>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-                onClick={() => navigate("/gallery")}
-              >
-                {" "}
-              </Text>
-            </a>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-                onClick={() => navigate("/blog")}
-              >
-                Blog{" "}
-              </Text>
-            </a>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-                onClick={() => navigate("/team")}
-              >
-                Team{" "}
-              </Text>
-            </a>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
-              <Text
-                className="common-pointer"
-                size="txtInterMedium18"
-                onClick={() => navigate("/contactus")}
-              >
-                Contacts Us{" "}
-              </Text>
-            </a>
-          </li> */}
+          {<NavList />}
         </ul>
         <Button
           className="cursor-pointer font-semibold leading-[normal] min-w-[170px] text-base text-center sm:hidden block"

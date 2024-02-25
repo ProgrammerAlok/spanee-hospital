@@ -30,9 +30,9 @@ const ProjectRoutes = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blogone" element={<BlogOne />} />
-          <Route path="/teamone" element={<TeamOne />} />
+          <Route path="/blog-details" element={<BlogOne />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/team-details" element={<TeamOne />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/dhiwise-dashboard" element={<Home />} />
         </Routes>

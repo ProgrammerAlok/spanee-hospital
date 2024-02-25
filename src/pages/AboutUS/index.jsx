@@ -7,11 +7,11 @@ import { BannerPrimary } from "components/Banner";
 import Footer from "components/Footer";
 import { AboutUs } from "components/Home";
 import { Heading1 } from "components/Heading";
+import MainLayout from "layout/MainLayout";
 
 const AboutUSPage = () => {
   return (
-    <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
-      <NavBar />
+    <MainLayout>
       <BannerPrimary text={`About Us`} />
       <AboutUs />
 
@@ -20,7 +20,7 @@ const AboutUSPage = () => {
           title={{
             title1: `Professionalism And Commitment Is Our Dedication`,
             title2: ``,
-            className: `text-center w-[65%] md:w-full mx-auto `
+            className: `text-center w-[65%] md:w-full mx-auto `,
           }}
         />
         <div className="flex md:flex-col flex-row gap-8 md:gap-4 items-center justify-between w-full">
@@ -34,12 +34,8 @@ const AboutUSPage = () => {
               className=" font-inter font-[700] md:text-[20px] text-[44px] leading-[53.25px] md:leading-[24.2px] text-blue_gray-900"
               size="txtInterBold44"
             >
-              <span className="text-blue_gray-900">
-                Our{" "}
-              </span>
-              <span className="text-red-500">
-                Vision
-              </span>
+              <span className="text-blue_gray-900">Our </span>
+              <span className="text-red-500">Vision</span>
             </Text>
             <Text
               className="font-inter font-[500] text-[20px] leading-[30px] tracking-[2%] text-gray-600 w-full md:text-[14px] md:leading-[18px] "
@@ -74,12 +70,8 @@ const AboutUSPage = () => {
               className=" font-inter font-[700] md:text-[20px] text-[44px] leading-[53.25px] md:leading-[24.2px] text-blue_gray-900"
               size="txtInterBold44"
             >
-              <span className="text-blue_gray-900">
-                Our{" "}
-              </span>
-              <span className="text-red-500">
-                Mission
-              </span>
+              <span className="text-blue_gray-900">Our </span>
+              <span className="text-red-500">Mission</span>
             </Text>
             <Text
               className="font-inter font-[500] text-[20px] leading-[30px] tracking-[2%] text-gray-600 w-full md:text-[14px] md:leading-[18px] "
@@ -104,9 +96,7 @@ const AboutUSPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
-    </div>
+    </MainLayout>
   );
 };
 

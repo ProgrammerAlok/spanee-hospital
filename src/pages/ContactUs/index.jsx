@@ -65,7 +65,7 @@ const ContactUsPage = () => {
                 rows="6"
               />
             </form>
-            <div className='flex justify-center items-center'>
+            <div className='flex md:justify-center items-center'>
               <Button
                 className="cursor-pointer mt-[41px] rounded-[7px] text-center flex justify-center items-center text-[18px] leading-[28px] font-[600] md:h-[2rem] md:w-[7.5rem] md:px-[15px] md:py-[7px] md:bg-red-500 md:font-poppins md:text-[12px] md:leading-[18px] "
                 color="indigo_900"
