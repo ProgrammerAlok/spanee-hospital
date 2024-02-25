@@ -1,10 +1,42 @@
+import './style.css'
 import { Button, Img, Text } from "components";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const NavBar = ({
   handleOnClick
 }) => {
   const navigate = useNavigate();
+
+  const NavList = [
+    {
+      to: `/`,
+      title: `Home`,
+    },
+    {
+      to: `/aboutus`,
+      title: `About Us`,
+    },
+    {
+      to: `/services`,
+      title: `Services`,
+    },
+    {
+      to: `/gallery`,
+      title: `Gallery`,
+    },
+    {
+      to: `/blog`,
+      title: `Blog`,
+    },
+    {
+      to: `/team`,
+      title: `Team`,
+    },
+    {
+      to: `/contactus`,
+      title: `Contact Us`,
+    },
+  ];
 
   return (
     <nav className="bg-white-A700 w-screen mx-auto">
@@ -21,24 +53,28 @@ const NavBar = ({
           onClick={handleOnClick}
         />
         <ul className="flex md:flex-1 md:flex-col flex-row gap-6 md:hidden items-center justify-center mb-9 md:mt-0 mt-[39px] w-auto md:w-full common-row-list">
-          <li>
-            <a
-              href="javascript:"
-              className="hover:font-bold text-md text-red-A700"
+          {NavList.map(({to, title}, ind) => (
+            <li key={ind}>
+              <NavLink
+                to={to}
+                className="hover:font-bold text-md text-gray-600 "
+              >
+                <Text size="txtInterMedium18"> {title} </Text>
+              </NavLink>
+            </li>
+          ))}
+          {/* <li>
+            <NavLink 
+              className="hover:font-bold text-gray-600 text-md hover:text-red-A700"
+              to={'/aboutus'}
             >
-              <Text size="txtInterBold18" onClick={()=>navigate('/')}>Home</Text>
-            </a>
-          </li>
-          <li>
-            <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
               <Text
                 className="common-pointer"
                 size="txtInterMedium18"
-                onClick={() => navigate("/aboutus")}
               >
-                About Us{" "}
+                {" "}
               </Text>
-            </a>
+            </NavLink>
           </li>
           <li>
             <a className="hover:font-bold text-gray-600 text-md hover:text-red-A700">
@@ -47,7 +83,7 @@ const NavBar = ({
                 size="txtInterMedium18"
                 onClick={() => navigate("/services")}
               >
-                Services
+                
               </Text>
             </a>
           </li>
@@ -58,7 +94,7 @@ const NavBar = ({
                 size="txtInterMedium18"
                 onClick={() => navigate("/gallery")}
               >
-                Gallery{" "}
+                {" "}
               </Text>
             </a>
           </li>
@@ -94,7 +130,7 @@ const NavBar = ({
                 Contacts Us{" "}
               </Text>
             </a>
-          </li>
+          </li> */}
         </ul>
         <Button
           className="cursor-pointer font-semibold leading-[normal] min-w-[170px] text-base text-center sm:hidden block"
