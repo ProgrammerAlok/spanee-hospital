@@ -138,16 +138,16 @@ const Home1Page = () => {
             </Text>
           </div>
           {/* right */}
-          <div className="flex w-[60%] md:gap-[7px] items-center justify-between md:mt-0 md:w-full">
+          <div className="flex gap-2 items-center justify-between md:mt-0 md:w-full w-[40%]">
             <Input
               name="group1000003850"
               placeholder="Your Email Address....."
-              className="leading-[normal] p-0 placeholder:text-gray-600 text-left text-sm w-full h-full "
-              wrapClassName="sm:w-full"
+              className="leading-[normal] p-0 placeholder:text-gray-600 text-left text-sm "
+              wrapClassName="w-full"
               type="email"
             ></Input>
             <Button
-              className="common-pointer !text-red-500 cursor-pointer font-semibold leading-[normal] min-w-[130px] text-center text-sm"
+              className="common-pointer !text-red-500 cursor-pointer font-semibold leading-[normal] min-w-[100px] text-center text-sm"
               onClick={() => navigate("/contactus")}
               shape="round"
               color="white_A700"
