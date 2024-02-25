@@ -1,3 +1,5 @@
+import {useMemo} from "react"
+
 export const OurNewsBlogData = [
     {
         avatar: `images/img_rectangle57_316x463.png`,
@@ -21,3 +23,27 @@ export const OurNewsBlogData = [
         description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.`,
     },
 ]
+
+export const OurNewsBlogPageData = [
+    `images/img_rectangle57_3.png`,
+    `images/img_rectangle57_5.png`,
+    `images/img_rectangle57_6.png`,
+    `images/img_rectangle57_7.png`,
+    `images/img_rectangle57_8.png`,
+    `images/img_rectangle57_9.png`,
+    `images/img_rectangle57_10.png`,
+    `images/img_rectangle57_11.png`,
+    `images/img_rectangle57_11.png`
+].map((avatar, ind) => {
+    return {
+        avatar: avatar,
+        date: `Jun 03,2023`, 
+        uploadedBy: `Admin`, 
+        title: `How to Determine the Length of a Time -Out`, 
+        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.`, 
+        ind: 0,        
+    };
+});
+
+
+

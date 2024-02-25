@@ -46,7 +46,7 @@ const OurNewsBlog = () => {
         ref={sliderRef}
         className="w-full"
         items={OurNewsBlogData.map((obj, key) => (
-          <Card key={key} {...obj} ind={key} />
+          <NewsBlogCard key={key} {...obj} ind={key} />
         ))}
         renderDotsItem={({ isActive }) => {
           if (isActive) {
@@ -68,9 +68,17 @@ const OurNewsBlog = () => {
   );
 };
 
-const Card = ({ avatar, date, uploadedBy, title, description, ind }) => {
+const NewsBlogCard = ({
+  avatar,
+  date,
+  uploadedBy,
+  title,
+  description,
+  ind,
+  className,
+}) => {
   return (
-    <div className="bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] rounded-[10px] hover:shadow-bs shadow-bs w-[95%]">
+    <div className={`bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] rounded-[10px] hover:shadow-bs shadow-bs w-[95%] ${className}`}>
       <Img
         className="h-[316px] md:h-auto object-cover rounded-tl-[10px] rounded-tr-[10px] w-full"
         src={avatar}
@@ -145,4 +153,4 @@ const Card = ({ avatar, date, uploadedBy, title, description, ind }) => {
   );
 };
 
-export { OurNewsBlog };
+export { OurNewsBlog, NewsBlogCard };

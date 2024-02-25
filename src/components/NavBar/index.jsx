@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const NavBar = ({
   handleOnClick
 }) => {
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white-A700 w-screen mx-auto">

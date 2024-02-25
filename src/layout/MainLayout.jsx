@@ -1,9 +1,10 @@
 import { Img, NavBar } from 'components';
 import Footer from 'components/Footer';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ title, children, className }) => {
 
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +20,13 @@ const MainLayout = ({ children }) => {
     setIsOpen(s=>!s);
   }
 
-  // if(isOpen) {
-  //   return (
-      
-  //   )
-  // }
-
   return (
     <>
-      <div className={`bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden ${isOpen?'hidden':''}`}>
+      <Helmet>
+        <title>{title || 'SH'} - Spanee Hospital</title>
+      </Helmet>
+
+      <div className={`bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden ${className} ${isOpen?'hidden':''}`}>
         <NavBar handleOnClick={toggleMenu} />
         {children}
         <Footer />
