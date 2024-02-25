@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import Spinner from "components/Spinner/Spinner";
 const ContactUs = React.lazy(() => import("pages/ContactUs"));
 const Team = React.lazy(() => import("pages/Team"));
 const TeamOne = React.lazy(() => import("pages/TeamOne"));
@@ -18,7 +19,7 @@ const Home1 = React.lazy(() => import("pages/Home1"));
 const ProjectRoutes = () => {
 
   return (
-    <React.Suspense fallback={<>Loading...</>}>
+    <React.Suspense fallback={<Spinner/>}>
       <Router>
         <Routes>
           <Route path="/" element={<Home1 />} />
