@@ -1,11 +1,5 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
-
-import { Button, Img, Line, Text } from "components";
-import BlogStack from "components/BlogStack";
-import Footer from "components/Footer";
-import Header1 from "components/Header1";
 import MainLayout from "layout/MainLayout";
 import { Heading1 } from "components/Heading";
 import { NewsBlogCard } from "components/Home/OurNewsBlog";
@@ -39,7 +33,12 @@ const BlogPage = () => {
 
         <div className=' grid grid-cols-3 md:grid-cols-1 items-center justify-between max-w-[1440px] w-[90%] mx-auto my-8 ' >
           {OurNewsBlogPageData.map((obj, ind) => 
-            <NewsBlogCard key={ind} { ...obj } className={`w-full my-4  ${ind>=3?'md:hidden':''}`} />
+            <NewsBlogCard 
+              key={ind} 
+              { ...obj } 
+              className={`w-full my-4  ${ind>=3?'md:hidden':''}`} 
+              handleOnClick={()=>navigate('/blog-details', { state: { ...obj } })}
+            />
           )}      
         </div>
         

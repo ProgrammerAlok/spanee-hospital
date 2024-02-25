@@ -77,9 +77,13 @@ const NewsBlogCard = ({
   description,
   ind,
   className,
+  handleOnClick = ()=>{}
 }) => {
   return (
-    <div className={`bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] rounded-[10px] hover:shadow-bs shadow-bs w-[95%] ${className}`}>
+    <div 
+      className={`bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] rounded-[10px] hover:shadow-bs shadow-bs w-[95%] cursor-pointer ${className}`}
+      onClick={handleOnClick}  
+    >
       <Img
         className="h-[316px] md:h-auto object-cover rounded-tl-[10px] rounded-tr-[10px] w-full"
         src={avatar}
