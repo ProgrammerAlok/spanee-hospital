@@ -29,55 +29,55 @@ const ContactUsPage = () => {
             className: `w-[80%] mx-auto md:w-full text-center`,
           }}
         />
-        <div className="flex gap-3 mt-20 w-[80%] mx-auto overflow-hidden ">
+        <div className="flex md:flex-col gap-3 mt-20 md:mt-10 w-[80%] md:w-full mx-auto overflow-hidden ">
           {/* left */}
-          <div className="w-[60%]">
+          <div className="w-[60%] md:w-full">
             <form
               action="submit"
-              className="grid grid-cols-2 gap-4 font-inter font-[400] text-[18px] leading-[21.78px] "
+              className="grid grid-cols-2 gap-4 md:gap-2 font-inter font-[400] text-[18px] md:text-[14px] md:leading-[16.94px] leading-[21.78px] "
             >
               <input
                 type="text"
-                className=" rounded-[5px] border px-3 py-4 "
+                className=" rounded-[5px] border border-[#E0E0E0] px-3 py-4 md:col-span-2 "
                 placeHolder="First Name "
               />
               <input
-                className=" rounded-[5px] border px-3 py-4 "
+                className=" rounded-[5px] border border-[#E0E0E0] px-3 py-4 md:col-span-2 "
                 type="text"
                 placeHolder="Last Name "
               />
               <input
                 type="email"
-                className=" col-span-2 rounded-[5px] border px-3 py-4"
+                className=" col-span-2 rounded-[5px] border border-[#E0E0E0] px-3 py-4"
                 placeHolder="Email "
               />
               <input
                 type="number"
-                className=" col-span-2 rounded-[5px] border px-3 py-4"
+                className=" col-span-2 rounded-[5px] border border-[#E0E0E0] px-3 py-4"
                 placeHolder="Phone Number "
               />
               <textarea
                 placeHolder="Message "
-                className="col-span-2 resize-none overflow-y-scroll rounded-[5px] border px-3 py-4"
+                className="col-span-2 resize-none overflow-y-scroll rounded-[5px] border border-[#E0E0E0] px-3 py-4"
                 name=""
                 id=""
                 cols="30"
                 rows="6"
               />
             </form>
-            <div>
+            <div className='flex justify-center items-center'>
               <Button
-                className="cursor-pointer font-semibold min-w-[223px] mr-[1068px] mt-[41px] rounded-[7px] text-center text-lg"
+                className="cursor-pointer mt-[41px] rounded-[7px] text-center flex justify-center items-center text-[18px] leading-[28px] font-[600] md:h-[2rem] md:w-[7.5rem] md:px-[15px] md:py-[7px] md:bg-red-500 md:font-poppins md:text-[12px] md:leading-[18px] "
                 color="indigo_900"
                 size="lg"
                 variant="fill"
               >
-                Send Message
+                <span>Send Message</span>
               </Button>
             </div>
           </div>
           {/* right */}
-          <div className="w-[40%]">
+          <div className="w-[40%] md:w-full md:mt-6">
             <div className="flex md:flex-1 flex-col gap-10 items-start justify-start w-full">
               <div className="flex flex-col gap-2 justify-start w-full">
                 <div className="flex flex-row gap-5 items-center justify-start w-full">
@@ -101,7 +101,7 @@ const ContactUsPage = () => {
                   </Text>
                 </div>
                 <Text
-                  className="md:ml-[0] ml-[60px] text-gray-500_01 text-lg w-[89%] sm:w-full"
+                  className="md:ml-[0] ml-[60px] text-gray-500_01 text-lg md:text-[14px] leading-[21.78px] md:leading-[16.94px] font-[400] font-inter w-[89%] sm:w-full"
                   size="txtInterRegular18Gray50001"
                 >
                   10-11,Gr. Floor, Ambedakar Shopping Center, Mandarwaja, Ring
@@ -130,7 +130,7 @@ const ContactUsPage = () => {
                   </Text>
                 </div>
                 <Text
-                  className="md:ml-[0] ml-[60px] text-gray-500_01 text-lg"
+                  className="md:ml-[0] ml-[60px] text-gray-500_01 text-lg md:text-[14px] leading-[21.78px] md:leading-[16.94px] font-[400] font-inter w-[89%] sm:w-full"
                   size="txtInterRegular18Gray50001"
                 >
                   +91-9825117510 (Naresh K. Sarasiya)
@@ -158,7 +158,7 @@ const ContactUsPage = () => {
                   </Text>
                 </div>
                 <Text
-                  className="leading-[28.00px] md:ml-[0] ml-[60px] text-gray-500_01 text-lg"
+                  className="md:ml-[0] ml-[60px] text-gray-500_01 text-lg md:text-[14px] leading-[21.78px] md:leading-[16.94px] font-[400] font-inter w-[89%] sm:w-full"
                   size="txtInterRegular18Gray50001"
                 >
                   <>

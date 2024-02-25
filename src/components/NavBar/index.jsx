@@ -45,6 +45,7 @@ const NavBar = ({
           className="sm:w-[25%] w-[10%]"
           src="images/img_image2.png"
           alt="imageTwo"
+          onClick={()=>navigate('/')}
         />
         <Img
           className="hidden sm:block w-[10%] aspect-square"
