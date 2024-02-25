@@ -80,12 +80,12 @@ export const OurExpertsCard = ({
 }) => {
   return (
     <div className={`md:h-[200px] h-[359px] relative w-[95%] ${className}`}>
-      <div className="absolute bg-white-A700 bottom-[0] flex flex-col gap-[11px] inset-x-[0] items-center justify-end mx-auto p-[18px] rounded-[10px] shadow-bs4 w-full">
+      <div className={`absolute ${ind===0?'bg-blue_gray-900':'bg-white-A700'} bottom-[0] flex flex-col gap-[11px] inset-x-[0] items-center justify-end mx-auto p-[18px] rounded-[10px] shadow-bs4 w-full`}>
         <Text 
-          className="mt-[198px] md:text-[18px] text-[26px] text-indigo-900 md:font-[700] font-[600] md:leading-[21.78px] leading-[31.47px] "
+          className={`mt-[198px] md:text-[18px] text-[26px] ${ind===0?'text-white-A700':'text-indigo-900'} md:font-[700] font-[600] md:leading-[21.78px] leading-[31.47px]`} 
           size="txtInterSemiBold26"
         >{name}</Text>
-        <Text className="text-blue-400 font-inter font-[18px] font-[400] md:text-[14px] leading-[21.78px] " size="txtInterRegular18Blue400">
+        <Text className={`${ind===0?'text-white-A700_01':'text-blue-400'} font-inter font-[18px] font-[400] md:text-[14px] leading-[21.78px]`} size="txtInterRegular18Blue400">
           {specialization}
         </Text>
       </div>
