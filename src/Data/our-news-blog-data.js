@@ -34,16 +34,15 @@ export const OurNewsBlogPageData = [
     `images/img_rectangle57_10.png`,
     `images/img_rectangle57_11.png`,
     `images/img_rectangle57_11.png`
-].map((avatar, ind) => {
-    return {
-        avatar: avatar,
+].map((avatarImgPath) => ({
+        avatar: avatarImgPath,
         date: `Jun 03,2023`, 
         uploadedBy: `Admin`, 
         title: `How to Determine the Length of a Time -Out`, 
         description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.`, 
         ind: 0,        
-    };
-});
+    })
+);
 
 
 

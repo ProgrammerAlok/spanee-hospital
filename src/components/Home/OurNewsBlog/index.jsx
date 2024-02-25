@@ -63,7 +63,8 @@ const OurNewsBlog = () => {
           );
         }}
       />
-      <BtnPrimary text={`Read More`} />
+      
+      <BtnPrimary text={`Read More`} handleOnClick={()=>navigate('/blog')} />
     </div>
   );
 };

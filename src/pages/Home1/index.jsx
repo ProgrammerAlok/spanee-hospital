@@ -29,7 +29,7 @@ const Home1Page = () => {
   const navigate = useNavigate();
 
   return (
-    <MainLayout>
+    <MainLayout title={`Home`}>
       <HomeBanner />
       <AboutUs />
       <OurServices />

@@ -60,6 +60,8 @@ const TeamOnePage = () => {
               </Text>
             </div>
           </div>
+
+          {/* kjjjjjjjjjjkj  */}
           <div className="flex flex-col items-center justify-start w-full">
             <div className="flex flex-col items-center justify-start w-full">
               <div className="gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 justify-center min-h-[auto] w-full">
@@ -80,7 +82,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse18_256x256.png"
+                    src=""
                     alt="ellipseEighteen"
                   />
                 </div>
@@ -101,7 +103,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse20.png"
+                    src=""
                     alt="ellipseTwenty"
                   />
                 </div>
@@ -122,7 +124,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse19.png"
+                    src=""
                     alt="ellipseNineteen"
                   />
                 </div>
@@ -143,7 +145,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse18.png"
+                    src=""
                     alt="ellipseEighteen"
                   />
                 </div>
@@ -164,7 +166,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rotate-[180deg] rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse23_256x256.png"
+                    src=""
                     alt="ellipseTwentyThree"
                   />
                 </div>
@@ -185,7 +187,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse20.png"
+                    src=""
                     alt="ellipseTwenty"
                   />
                 </div>
@@ -206,7 +208,7 @@ const TeamOnePage = () => {
                   </div>
                   <Img
                     className="absolute h-64 inset-x-[0] mx-auto rounded-[50%] top-[0] w-64"
-                    src="images/img_ellipse19_256x256.png"
+                    src=""
                     alt="ellipseNineteen"
                   />
                 </div>
@@ -318,6 +320,7 @@ const TeamOnePage = () => {
               </div>
             </div>
           </div>
+          {/* jkkjl;lk;l */}
           <Button
             className="cursor-pointer flex items-center justify-center min-w-[184px] rounded-[5px]"
             rightIcon={

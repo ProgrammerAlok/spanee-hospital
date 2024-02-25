@@ -26,7 +26,7 @@ const NavBar = ({
               href="javascript:"
               className="hover:font-bold text-md text-red-A700"
             >
-              <Text size="txtInterBold18">Home</Text>
+              <Text size="txtInterBold18" onClick={()=>navigate('/')}>Home</Text>
             </a>
           </li>
           <li>
@@ -78,7 +78,7 @@ const NavBar = ({
               <Text
                 className="common-pointer"
                 size="txtInterMedium18"
-                onClick={() => navigate("/teamone")}
+                onClick={() => navigate("/team")}
               >
                 Team{" "}
               </Text>

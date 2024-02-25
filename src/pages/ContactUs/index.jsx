@@ -4,13 +4,33 @@ import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Line, Text } from "components";
 import Footer1 from "components/Footer1";
+import MainLayout from "layout/MainLayout";
+import { BannerPrimary } from "components/Banner";
+import { Heading1 } from "components/Heading";
 
 const ContactUsPage = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
+    <MainLayout title={`Contact Us`}>
+      <div className=' w-full mx-auto'>
+        <BannerPrimary text={`Contact Us`} />
+        <Heading1
+          heading={{
+            text: ``,
+            className: ``,
+          }}
+          title={{
+            title1: ``,
+            className: ``,
+          }}
+          description={{
+            text: ``,
+            className: ``,
+          }}
+        />
+      </div>
+      {/* <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
         <header className="bg-white-A700 flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 w-full">
           <Img
             className="md:flex-1 h-14 sm:h-auto ml-60 md:ml-[0] md:mt-0 my-[22px] object-cover w-[8%] md:w-full"
@@ -318,8 +338,8 @@ const ContactUsPage = () => {
           </div>
         </div>
         <Footer1 className="bg-indigo-900 flex items-center justify-center mt-[100px] md:px-5 w-full" />
-      </div>
-    </>
+      </div> */}
+    </MainLayout>
   );
 };
 

@@ -1,7 +1,11 @@
 import { Img, Text } from "components";
+import { BtnPrimary } from "components/Button/BtnPrimary";
 import { Heading1 } from "components/Heading";
+import { useNavigate } from 'react-router-dom'
 
 const OurGallery = () => {
+  const navigate = useNavigate();
+  
   return (
     <div
       className='container-wrapper max-w-[1440px] w-[90%] mx-auto mt-20 '
@@ -67,6 +71,10 @@ const OurGallery = () => {
             alt="rectangleFiftyFive"
           /> 
         </div>       
+      </div>
+      
+      <div className='flex justify-center items-center pt-10'>
+        <BtnPrimary className={``} text={`View More`} handleOnClick={()=>navigate('/gallery')} />
       </div>
     </div>
   );

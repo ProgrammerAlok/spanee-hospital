@@ -3,11 +3,42 @@ import React from "react";
 import { Button, Img, Line, Text } from "components";
 import Footer from "components/Footer";
 import Header1 from "components/Header1";
+import MainLayout from "layout/MainLayout";
+import { Heading1 } from "components/Heading";
+import { BannerPrimary } from "components/Banner";
+import { BtnPrimary } from "components/Button/BtnPrimary";
+import { OurExpertsCard } from "components/Home/OurExperts";
+import { OurExpertPageData } from "Data/our-experts-data";
 
 const TeamPage = () => {
   return (
-    <>
-      <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
+    <MainLayout title={`Team`}>      
+      <div className='max-w-[1440px] w-[90%] mx-auto flex flex-col justify-center items-center'>
+        <BannerPrimary text={`Team`} />
+        <Heading1
+          heading={{
+            text: `Team Membar`,
+            className: ` text-center text-[#FC0606] `,
+          }}        
+          title={{
+            title1: `Our Experts`,
+            className: ` text-center `,
+          }}
+          description={{
+            text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printe.`,
+            className: ` text-center w-[80%] md:w-full mx-auto `,
+          }}
+        />
+        <div className='w-full grid grid-cols-4 gap-y-8 py-8 md:hidden'>
+          {OurExpertPageData.map((obj, ind) => 
+            <OurExpertsCard key={ind} { ...obj } ind={ind} className={` w-full`} />
+          )}          
+        </div>
+        <div className=' my-10'>
+          <BtnPrimary text={`View More`} />
+        </div>
+      </div>
+      {/* <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
         <Header1 className="bg-white-A700 flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 w-full" />
         <div className="bg-indigo-900 flex md:flex-col flex-row md:gap-5 items-start justify-start md:px-10 sm:px-5 px-[279px] w-full">
           <Line className="bg-gradient  md:h-0.5 h-[450px] w-0.5 md:w-full" />
@@ -146,8 +177,8 @@ const TeamPage = () => {
           </div>
         </div>
         <Footer className="bg-indigo-900 flex items-center justify-center mt-[107px] md:px-5 w-full" />
-      </div>
-    </>
+      </div> */}
+    </MainLayout>
   );
 };
 

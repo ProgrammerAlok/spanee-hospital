@@ -47,7 +47,7 @@ const OurExperts = () => {
           ref={sliderRef}
           className=" w-screen ml-auto"
           items={OurExpertsData.map((obj, key) => (
-            <Card key={key} { ...obj } />
+            <OurExpertsCard key={key} { ...obj } />
           ))}
           renderDotsItem={({ isActive }) => {
             if (isActive) {
@@ -65,17 +65,23 @@ const OurExperts = () => {
           }}
         />
 
-        <BtnPrimary text={`View More`} />
+        <BtnPrimary text={`View More`} handleOnClick={()=>navigate('/team')} />
       </div>
     </div>
   );
 };
 
-const Card = ({ avatar, name, specialization }) => {
+export const OurExpertsCard = ({ 
+  avatar, 
+  name, 
+  specialization, 
+  ind=7, 
+  className
+}) => {
   return (
-    <div className="md:h-[200px] h-[359px] relative w-[95%] ">
+    <div className={`md:h-[200px] h-[359px] relative w-[95%] ${className}`}>
       <div className="absolute bg-white-A700 bottom-[0] flex flex-col gap-[11px] inset-x-[0] items-center justify-end mx-auto p-[18px] rounded-[10px] shadow-bs4 w-full">
-        <Text
+        <Text 
           className="mt-[198px] md:text-[18px] text-[26px] text-indigo-900 md:font-[700] font-[600] md:leading-[21.78px] leading-[31.47px] "
           size="txtInterSemiBold26"
         >{name}</Text>
