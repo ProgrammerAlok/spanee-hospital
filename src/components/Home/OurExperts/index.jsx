@@ -13,8 +13,8 @@ const OurExperts = () => {
   const [sliderState, setsliderState] = React.useState(0);
 
   return (
-    <div className="flex flex-col mt-[103px] max-w-[1440px] w-[90%]">
-      <div className="flex flex-col gap-[50px] items-center justify-start w-full">
+    <div className="flex flex-col mt-10 md:mt-5 max-w-[1440px] w-[90%]">
+      <div className="flex flex-col gap-12 md:gap-4 items-center justify-start w-full">
         <Heading1
           className={` text-center `}
           heading={{

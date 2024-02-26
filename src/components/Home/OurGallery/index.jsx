@@ -8,7 +8,7 @@ const OurGallery = () => {
   
   return (
     <div
-      className='container-wrapper max-w-[1440px] w-[90%] mx-auto mt-20 '
+      className='container-wrapper max-w-[1440px] w-[90%] mx-auto mt-20 md:mt-5 '
     >
       <div
         className='our-gallery-container  '
@@ -73,7 +73,7 @@ const OurGallery = () => {
         </div>       
       </div>
       
-      <div className='flex justify-center items-center pt-10'>
+      <div className='flex justify-center items-center pt-10 md:pt-5'>
         <BtnPrimary className={``} text={`View More`} handleOnClick={()=>navigate('/gallery')} />
       </div>
     </div>

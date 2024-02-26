@@ -12,7 +12,7 @@ const OurReviews = () => {
 
   return (
     <div className=' max-w-[1440px] w-[90%] flex flex-col justify-center items-center md:gap-6 pt-6 '>
-        <div className="flex flex-col gap-3.5 items-center justify-start  ">          
+        <div className="flex flex-col gap-3.5 md:gap-0 items-center justify-start  ">          
           <Heading1 
             className={`text-center`}
             title={{
@@ -41,7 +41,7 @@ const OurReviews = () => {
             setsliderState(e?.item);
           }}
           ref={sliderRef}
-          className="max-w-[1440px] w-full mt-8 md:mt-2"
+          className="max-w-[1440px] w-full mt-8 md:mt-0"
           items={OurReviewsData.map((obj, key) => <Card key={key} {...obj} />)}
           renderDotsItem={({ isActive }) => {
             if (isActive) {

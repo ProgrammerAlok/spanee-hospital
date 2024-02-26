@@ -12,7 +12,7 @@ const OurNewsBlog = () => {
   const [sliderState, setsliderState] = React.useState(0);
 
   return (
-    <div className="flex flex-col gap-[50px] items-center justify-start max-w-[1440px] mt-[105px] mx-auto w-[90%] ">
+    <div className="flex flex-col gap-[50px] md:gap-4 items-center justify-start max-w-[1440px] mt-10 md:mt-5 mx-auto w-[90%] ">
       <Heading1
         className={``}
         heading={{
@@ -26,7 +26,7 @@ const OurNewsBlog = () => {
         description={{
           text: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in 
             some form, by injected humour, or randomised words which don't look even slightly believable.`,
-          className: `w-[80%] md:w-full mx-auto text-center pt-4 md:pt-2 `,
+          className: `w-[80%] md:w-full mx-auto text-center pt-4 md:pt-0 `,
         }}
       />
 
@@ -81,7 +81,7 @@ const NewsBlogCard = ({
 }) => {
   return (
     <div 
-      className={`bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] rounded-[10px] hover:shadow-bs shadow-bs w-[95%] cursor-pointer ${className}`}
+      className={`bg-white-A700 hover:cursor-pointer flex flex-1 flex-col gap-5 items-center justify-start pb-[19px] md:pb-3 rounded-[10px] hover:shadow-bs shadow-bs w-[95%] cursor-pointer ${className}`}
       onClick={handleOnClick}  
     >
       <Img
