@@ -35,7 +35,7 @@ const Home1Page = () => {
       <OurServices />
 
       {/* secondary banner */}
-      <div className="relative h-[38rem] w-screen bg-gray-50_03 overflow-hidden mt-12 ">
+      <div className="relative h-[38rem] w-screen bg-gray-50_03 overflow-hidden mt-[8rem] ">
         <div className="absolute inset-x-[0] mx-auto top-[0] max-w-[1440px]">
           <div className="relative md:h-[1147px] h-[1228px] sm:h-[175px] mx-auto">
             <div className="absolute bg-gray-50_03 inset-x-[0] mx-auto top-[0] w-full"></div>

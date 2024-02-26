@@ -11,19 +11,7 @@ const OurServices = () => {
   const sliderRef = React.useRef(null);
   const [sliderState, setsliderState] = React.useState(0);
   return (
-    <div className="sm:h-[1272px] h-[557px] md:h-[963px] max-w-[1440px] mt-[99px] mx-auto md:px-5 relative w-[90%]">
-      {/* <Text
-                className="absolute bottom-[15%] inset-x-[0] mx-auto sm:text-3xl md:text-[32px] text-[34px] text-indigo-900 w-max"
-                size="txtInterBold34"
-            >
-                Pathology
-            </Text>
-            <Text
-                className="absolute bottom-[15%] right-[41%] sm:text-3xl md:text-[32px] text-[34px] text-center text-indigo-900"
-                size="txtInterBold34"
-            >
-                Pathology
-            </Text> */}
+    <div className="sm:h-[0px] h-[557px] md:h-[963px] max-w-[1440px] mt-[99px] md:mt-[270px] md:mb-20 mx-auto md:px-5 relative w-[90%]">
       <div className="absolute flex flex-col gap-[50px] h-full inset-[0] items-center justify-center m-auto w-full">
         <div className="flex flex-col items-center justify-start">
           <Heading1
@@ -59,7 +47,7 @@ const OurServices = () => {
             setsliderState(e?.item);
           }}
           ref={sliderRef}
-          className="max-w-[1440px] w-full mt-8 md:mt-2"
+          className="max-w-[1440px] w-full mt-8 md:mt-0"
           items={OurServicesData.map((obj, key) => (
             <Card key={key} {...obj} />
           ))}
