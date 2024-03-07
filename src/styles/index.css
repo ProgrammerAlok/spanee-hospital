@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
   line-height: normal;
+  font-family: "Inter", sans-serif !important;
 }
 body {
-  font-family: "Roboto", sans-serif !important;
+  /* font-family: "Roboto", sans-serif ; */
+  font-family: "Inter", sans-serif !important;
   margin: 0;
   padding: 0;
 }
